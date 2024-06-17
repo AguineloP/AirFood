@@ -9,15 +9,25 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
+    position: relative;
 }
 
 .logo {
     max-width: 100px;
     height: auto;
 }
-.canvas {
-   max-width: 700px;
-   height: auto;
+
+#languageSwitcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#languageSwitcher img {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 section {
@@ -39,4 +49,9 @@ button {
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.canvas {
+   max-width: 700px;
+   height: auto;
 }
