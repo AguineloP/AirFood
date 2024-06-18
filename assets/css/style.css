@@ -30,6 +30,8 @@ header {
     height: 20px;
     margin: 0 5px;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 h1 {
@@ -38,9 +40,14 @@ h1 {
     padding-top: 10px;
 }
 
+main {
+    text-align: center;
+}
+
 section {
     padding: 20px;
     margin: 20px;
+    background-color: #94959c; /* Cor de fundo para a seção */
 }
 
 #contact .contact-member {
@@ -57,4 +64,9 @@ button {
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.contact-member a {
+    display: inline-block;
+    margin: 5px;
 }
