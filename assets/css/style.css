@@ -2,41 +2,40 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #94959c; /* Cor de fundo para todo o corpo */
 }
 
 header {
     background-color: #cfe2f3;
-    color: white;
     text-align: center;
     padding: 1em 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Centraliza verticalmente */
+    position: relative;
 }
 
 .logo {
     max-width: 100px;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 #languageSwitcher {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    gap: 10px; /* Espaçamento entre as bandeiras */
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-#languageSwitcher img {
+.flag-br, .flag-us {
+    width: 30px;
+    height: 20px;
+    margin: 0 5px;
     cursor: pointer;
-    width: 30px; /* Largura padrão */
-    height: auto; /* Altura automática */
 }
 
-#languageSwitcher .flag-us {
-    width: 35px; /* Largura maior para a bandeira dos EUA */
-}
-
-#languageSwitcher .flag-br {
-    width: 30px; /* Largura padrão para a bandeira do Brasil */
+h1 {
+    color: black;
+    margin: 0;
+    padding-top: 10px;
 }
 
 section {
@@ -58,14 +57,4 @@ button {
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
-}
-
-.canvas {
-    max-width: 700px;
-    height: auto;
-}
-
-h1 {
-    margin-right: auto; /* Move o título para o canto esquerdo */
-    margin-left: 10px; /* Adiciona espaço à esquerda do título */
 }
