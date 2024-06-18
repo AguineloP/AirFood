@@ -1,48 +1,30 @@
-// Função para definir o idioma e salvar no localStorage
-function setLanguage(language) {
-    localStorage.setItem('preferredLanguage', language);
+document.addEventListener('DOMContentLoaded', (event) => {
+    const ptButton = document.getElementById('ptButton');
+    const enButton = document.getElementById('enButton');
 
-    var ptElements = document.querySelectorAll('.pt');
-    var enElements = document.querySelectorAll('.en');
+    ptButton.addEventListener('click', () => {
+        switchLanguage('pt');
+    });
 
-    if (language === 'pt') {
-        ptElements.forEach(function(element) {
-            element.style.display = 'block';
-        });
-        enElements.forEach(function(element) {
-            element.style.display = 'none';
-        });
-    } else if (language === 'en') {
-        ptElements.forEach(function(element) {
-            element.style.display = 'none';
-        });
-        enElements.forEach(function(element) {
-            element.style.display = 'block';
-        });
-    }
-}
+    enButton.addEventListener('click', () => {
+        switchLanguage('en');
+    });
 
-// Função para carregar o idioma preferido do localStorage
-function loadPreferredLanguage() {
-    var preferredLanguage = localStorage.getItem('preferredLanguage');
-    if (preferredLanguage) {
-        setLanguage(preferredLanguage);
+    const switchLanguage = (lang) => {
+        if (lang === 'pt') {
+            document.querySelectorAll('.pt').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+        } else if (lang === 'en') {
+            document.querySelectorAll('.pt').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'block');
+        }
+        localStorage.setItem('preferredLanguage', lang);
+    };
+
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+        switchLanguage(savedLanguage);
     } else {
-        // Se não houver idioma preferido, definir como português por padrão
-        setLanguage('pt');
+        switchLanguage('pt');
     }
-}
-
-// Eventos para os botões de idioma
-document.getElementById('ptButton').addEventListener('click', function() {
-    setLanguage('pt');
-});
-
-document.getElementById('enButton').addEventListener('click', function() {
-    setLanguage('en');
-});
-
-// Carregar o idioma preferido ao abrir a página
-document.addEventListener('DOMContentLoaded', function() {
-    loadPreferredLanguage();
 });
