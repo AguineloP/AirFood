@@ -24,10 +24,18 @@ header {
 }
 
 #languageSwitcher img {
-    width: 30px;
-    height: 20px;
     cursor: pointer;
     margin-left: 5px;
+}
+
+#languageSwitcher .flag-br {
+    width: 30px;
+    height: 20px;
+}
+
+#languageSwitcher .flag-us {
+    width: 35px;
+    height: 25px;
 }
 
 section {
