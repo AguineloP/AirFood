@@ -2,52 +2,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #94959c; /* Cor de fundo para todo o corpo */
 }
 
 header {
     background-color: #cfe2f3;
+    color: white;
     text-align: center;
     padding: 1em 0;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .logo {
     max-width: 100px;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 #languageSwitcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre as bandeiras */
 }
 
-.flag-br, .flag-us {
-    width: 30px;
-    height: 20px;
-    margin: 0 5px;
+#languageSwitcher img {
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
+    width: 30px; /* Largura padrão */
+    height: auto; /* Altura automática */
 }
 
-h1 {
-    color: black;
-    margin: 0;
-    padding-top: 10px;
+#languageSwitcher .flag-us {
+    width: 35px; /* Largura maior para a bandeira dos EUA */
 }
 
-main {
-    text-align: center;
+#languageSwitcher .flag-br {
+    width: 30px; /* Largura padrão para a bandeira do Brasil */
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    background-color: #94959c; /* Cor de fundo para a seção */
 }
 
 #contact .contact-member {
@@ -66,7 +60,12 @@ button {
     cursor: pointer;
 }
 
-.contact-member a {
-    display: inline-block;
-    margin: 5px;
+.canvas {
+    max-width: 700px;
+    height: auto;
+}
+
+h1 {
+    margin-right: auto; /* Move o título para o canto esquerdo */
+    margin-left: 10px; /* Adiciona espaço à esquerda do título */
 }
