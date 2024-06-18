@@ -9,7 +9,6 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Centraliza verticalmente */
@@ -64,4 +63,9 @@ button {
 .canvas {
     max-width: 700px;
     height: auto;
+}
+
+h1 {
+    margin-right: auto; /* Move o título para o canto esquerdo */
+    margin-left: 10px; /* Adiciona espaço à esquerda do título */
 }
