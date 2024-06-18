@@ -2,16 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #babbbf; /* Nova cor de fundo */
 }
 
 header {
     background-color: #cfe2f3;
     color: white;
+    text-align: center;
     padding: 1em 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .logo {
@@ -21,34 +21,27 @@ header {
 
 #languageSwitcher {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre as bandeiras */
 }
 
 #languageSwitcher img {
     cursor: pointer;
-    width: 30px;
-    height: auto;
+    width: 30px; /* Largura padrão */
+    height: auto; /* Altura automática */
 }
 
 #languageSwitcher .flag-us {
-    width: 35px;
+    width: 35px; /* Largura maior para a bandeira dos EUA */
 }
 
 #languageSwitcher .flag-br {
-    width: 30px;
-}
-
-main {
-    padding: 20px;
-    background-color: #babbbf; /* Cor de fundo para o corpo principal */
+    width: 30px; /* Largura padrão para a bandeira do Brasil */
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    background-color: white; /* Cor de fundo para as seções */
-    border-radius: 8px; /* Cantos arredondados para as seções */
 }
 
 #contact .contact-member {
@@ -73,6 +66,6 @@ button {
 }
 
 h1 {
-    margin-right: auto;
-    margin-left: 10px;
+    margin-right: auto; /* Move o título para o canto esquerdo */
+    margin-left: 10px; /* Adiciona espaço à esquerda do título */
 }
