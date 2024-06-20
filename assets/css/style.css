@@ -1,72 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #94959c; /* Cor de fundo para todo o corpo */
-    text-align: center; /* Centraliza o texto no corpo */
 }
 
-header {
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     background-color: #cfe2f3;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
+    border-bottom: #DCDCDC solid 1px;
+    box-shadow: 0 5px 10px #DCDCDC;
+}
+
+.cabecalho-texto {
+    display: flex;
+    gap: 10px;
 }
 
 .logo {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 80px;
 }
 
 #languageSwitcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .flag-br, .flag-us {
     width: 30px;
-    height: 20px;
-    margin: 0 5px;
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
 }
 
-h1 {
-    color: black;
-    margin: 0;
-    padding-top: 10px;
+.principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-main {
-    padding: 20px;
+.sobre {
+    margin: 0 auto;
+    width: 700px;
+}
+
+#contact {
+    display: flex;
+    width: 1100px;
+    gap: 50px;
     margin: 20px auto;
-    max-width: 800px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cfe2f3;
+    box-shadow: 0 5px 10px #DCDCDC;
 }
 
-section {
-    padding: 20px;
-    background-color: #94959c; /* Cor de fundo para a seção */
-}
-
-#contact .contact-member {
+.contact-member {
     margin: 10px 0;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
+.botao-detalhe {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.botao-detalhe:hover {
+    background-color: #d3d3d3;
+    box-shadow: 0 10px 20px #DCDCDC;
 }
 
 .contact-member a {

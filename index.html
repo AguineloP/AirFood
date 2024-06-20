@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/AguineloP/Images/main/logo_emp.png" alt="Logo do Projeto" class="logo">
+    <header class="cabecalho">
+        <section class="cabecalho-texto">
+            <img src="https://raw.githubusercontent.com/AguineloP/Images/main/logo_emp.png" alt="Logo do Projeto" class="logo">
+            <h1>AirFood</h1>
+        </section>
         <div id="languageSwitcher">
             <img src="https://raw.githubusercontent.com/AguineloP/Images/main/brazil-flag.png" alt="Português" id="ptButton" class="flag-br">
             <img src="https://raw.githubusercontent.com/AguineloP/Images/main/us-flag.png" alt="English" id="enButton" class="flag-us">
         </div>
-        <h1>Conheça o AirFood</h1>
     </header>
-    <main>
-        <section id="about">
+
+    <main class="principal">
+        <section id="about" class="sobre">
             <h2>Sobre o projeto</h2>
             <p class="pt">O AirFood é o trabalho final da matéria de Empreendedorismo da faculdade de Ciência da Computação, da Universidade Federal de Jataí (UFJ). Esse trabalho foi idealizado pelos alunos Aguinelo Pimenta Barbosa Neto, Cássio Alves de Souza e Davi Santana Basto Feitosa, todos cursantes do primeiro período do curso.</p>
             <p class="en" style="display: none;">AirFood is the final project for the Entrepreneurship course at the Computer Science faculty of the Federal University of Jataí (UFJ). This project was conceived by students Aguinelo Pimenta Barbosa Neto, Cássio Alves de Souza, and Davi Santana Basto Feitosa, all first-year students.</p>
         </section>
+
+        <h2>Entre em Contato</h2>
         <section id="contact">
-            <h2>Entre em Contato</h2>
             <div class="contact-member">
                 <h3>Aguinelo Pimenta Barbosa Neto</h3>
                 <a href="https://instagram.com/_aguinelo" target="_blank">
@@ -62,7 +66,7 @@
         </section>
     </main>
     <footer>
-        <button onclick="window.location.href='project.html'">Mais detalhes do projeto</button>
+        <button class="botao-detalhe" onclick="window.location.href='project.html'">Mais detalhes do projeto</button>
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
