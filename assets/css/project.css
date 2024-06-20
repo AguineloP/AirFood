@@ -1,0 +1,11 @@
+.texto-detalhes {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imagem {
+   display: flex;
+   padding: 10px;
+   margin: 0 auto;
+}
