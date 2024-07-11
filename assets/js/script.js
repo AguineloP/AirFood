@@ -1,3 +1,6 @@
+import * as THREE from 'https://cdn.skypack.dev/three@0.135.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.135.0/examples/jsm/loaders/GLTFLoader.js';
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const ptButton = document.getElementById('ptButton');
     const enButton = document.getElementById('enButton');
@@ -35,8 +38,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     renderer.setSize(window.innerWidth, 500);
     document.getElementById('3d-container').appendChild(renderer.domElement);
 
+    // Adicionar iluminação
+    const light = new THREE.AmbientLight(0xffffff); // luz branca
+    scene.add(light);
+
     // Carregar o modelo 3D
-    const loader = new THREE.GLTFLoader();
+    const loader = new GLTFLoader();
     loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/FlightHelmet/glTF/FlightHelmet.gltf', function (gltf) {
         scene.add(gltf.scene);
     }, undefined, function (error) {
