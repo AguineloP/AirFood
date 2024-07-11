@@ -82,7 +82,7 @@
 
             // Carregar o modelo 3D
             const loader = new GLTFLoader();
-            loader.load('https://raw.githubusercontent.com/AguineloP/AirFood/main/assets/model/modelo3d_drone.gltf', function (gltf) {
+            loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/blob/fe4aab0af3495713f5638ccec37bf00571da49a7/Models/FlightHelmet/glTF/FlightHelmet.gltf', function (gltf) {
                 scene.add(gltf.scene);
             }, undefined, function (error) {
                 console.error(error);
