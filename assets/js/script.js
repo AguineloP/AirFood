@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Carregar o modelo 3D
     const loader = new THREE.GLTFLoader();
-    loader.load('https://raw.githubusercontent.com/AguineloP/AirFood/main/assets/model/modelo3d_drone.gltf', function (gltf) {
+    loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/FlightHelmet/glTF/FlightHelmet.gltf', function (gltf) {
         scene.add(gltf.scene);
     }, undefined, function (error) {
         console.error(error);
