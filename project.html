@@ -35,9 +35,10 @@
     <footer>
         <button class="botao-detalhe" onclick="window.location.href='index.html'">Voltar para a página principal</button>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
-    <script>
+    <script type="module">
+        import * as THREE from 'https://cdn.skypack.dev/three@0.135.0/build/three.module.js';
+        import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.135.0/examples/jsm/loaders/GLTFLoader.js';
+
         document.addEventListener('DOMContentLoaded', (event) => {
             const ptButton = document.getElementById('ptButton');
             const enButton = document.getElementById('enButton');
@@ -78,11 +79,9 @@
             // Adicionar iluminação
             const light = new THREE.AmbientLight(0xffffff); // luz branca
             scene.add(light);
-            
-            import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
-            import { GLTFLoader } from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js';
-            
-            const loader = new THREE.GLTFLoader();
+
+            // Carregar o modelo 3D
+            const loader = new GLTFLoader();
             loader.load('https://raw.githubusercontent.com/AguineloP/AirFood/main/assets/model/modelo3d_drone.gltf', function (gltf) {
                 scene.add(gltf.scene);
             }, undefined, function (error) {
