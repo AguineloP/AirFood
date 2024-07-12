@@ -1,30 +1,49 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const ptButton = document.getElementById('ptButton');
-    const enButton = document.getElementById('enButton');
+document.addEventListener('DOMContentLoaded', function () {
+    var ptButton = document.getElementById('ptButton');
+    var enButton = document.getElementById('enButton');
+    var ptTexts = document.querySelectorAll('.pt');
+    var enTexts = document.querySelectorAll('.en');
+    var buttons = document.querySelectorAll('button[data-lang-pt][data-lang-en]');
+    var titles = document.querySelectorAll('h2[data-lang-pt][data-lang-en]');
+    var pageTitle = document.querySelector('title');
 
-    ptButton.addEventListener('click', () => {
-        switchLanguage('pt');
+    ptButton.addEventListener('click', function () {
+        toggleLanguage('pt');
     });
 
-    enButton.addEventListener('click', () => {
-        switchLanguage('en');
+    enButton.addEventListener('click', function () {
+        toggleLanguage('en');
     });
 
-    const switchLanguage = (lang) => {
+    function toggleLanguage(lang) {
         if (lang === 'pt') {
-            document.querySelectorAll('.pt').forEach(el => el.style.display = 'block');
-            document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+            ptTexts.forEach(function (text) {
+                text.style.display = 'block';
+            });
+            enTexts.forEach(function (text) {
+                text.style.display = 'none';
+            });
+            buttons.forEach(function (button) {
+                button.textContent = button.getAttribute('data-lang-pt');
+            });
+            titles.forEach(function (title) {
+                title.textContent = title.getAttribute('data-lang-pt');
+            });
+            pageTitle.textContent = pageTitle.getAttribute('data-lang-pt');
         } else if (lang === 'en') {
-            document.querySelectorAll('.pt').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.en').forEach(el => el.style.display = 'block');
+            ptTexts.forEach(function (text) {
+                text.style.display = 'none';
+            });
+            enTexts.forEach(function (text) {
+                text.style.display = 'block';
+            });
+            buttons.forEach(function (button) {
+                button.textContent = button.getAttribute('data-lang-en');
+            });
+            titles.forEach(function (title) {
+                title.textContent = title.getAttribute('data-lang-en');
+            });
+            pageTitle.textContent = pageTitle.getAttribute('data-lang-en');
         }
-        localStorage.setItem('preferredLanguage', lang);
-    };
-
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage) {
-        switchLanguage(savedLanguage);
-    } else {
-        switchLanguage('pt');
     }
 });
